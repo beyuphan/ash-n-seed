@@ -1,0 +1,26 @@
+# Godot
+.godot/
+*.tmp
+
+# Çıktılar ve sunum
+export/
+sunum/
+*.docx
+
+# Python
+__pycache__/
+*.pyc
+
+# Trailer (Remotion): bağımlılıklar ve büyük çıktılar
+trailer/node_modules/
+trailer/out/
+trailer/public/
+*.log
+*.done
+trailer/capture/log_*.txt
+override.cfg
+
+# Repoda olmayacaklar
+metin_incelemesi.md
+tanitim_senaryosu.md
+trailer/

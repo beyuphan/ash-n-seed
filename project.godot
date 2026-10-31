@@ -1,0 +1,48 @@
+; Engine configuration file.
+; Ash n Seed - COP31 oyun projesi
+
+config_version=5
+
+[application]
+
+config/name="Ash n Seed"
+run/main_scene="res://scenes/main_menu.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[audio]
+
+; Web'de varsayılan 'Sample' kipi çalışma anında kurulan Music/SFX kanallarıyla sessiz kalıyor: masaüstü gibi Stream kullan.
+general/default_playback_type.web=0
+driver/output_latency.web=100
+
+[autoload]
+
+Settings="*res://scripts/autoload/settings.gd"
+AudioManager="*res://scripts/autoload/audio_manager.gd"
+GameState="*res://scripts/autoload/game_state.gd"
+CrisisManager="*res://scripts/autoload/crisis_manager.gd"
+SceneManager="*res://scripts/autoload/scene_manager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[gui]
+
+theme/custom="res://assets/ui/theme.tres"
+
+[internationalization]
+
+locale/fallback="en"
+locale/translations=PackedStringArray("res://translations/strings.en.translation", "res://translations/strings.tr.translation")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.133, 0.141, 0.125, 1)

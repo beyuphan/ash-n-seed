@@ -1,0 +1,3440 @@
+{
+ "_doc": {
+  "alanlar": "id, character (hulusi/riza/canan/event/assistant/nezaket/mirmir/defne/bruce/yigithan), weight, once, recyclable, must_by_day, priority, cooldown_days, scheduled_only, locked, requires, choices. Metinler strings.csv içinde CARD_<ID>_TEXT/_A/_B, karar sonrası tepki CARD_<ID>_RA/_RB, gazete manşeti NEWS_C_<ID>_A/_B.",
+  "requires": "min/max_day, min/max_money, min/max_people, min/max_nature, flags_all, flags_none",
+  "choice": "effects {money,people,nature}, pollution_rate, set_flags, unlock_cards, schedule [{card, delay, chance}]",
+  "etki_olcegi": "Word'deki + işaretleri: tek=8, iki=15, üç=25. Sağlık, Çevre sayıldı.",
+  "must_by_day": "Bu günde hâlâ çıkmadıysa kart öncelikli çıkar. Zincir kartlarının mutlaka gelmesi için.",
+  "recyclable": "Gün 21'den sonra, yeni faz kartları gelene kadar tekrar çekilebilir."
+ },
+ "cards": [
+  {
+   "id": "f1_kara_kis",
+   "character": "riza",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "must_by_day": 4,
+   "choices": [
+    {
+     "effects": {
+      "people": 8,
+      "nature": -15
+     },
+     "set_flags": [
+      "komur_dagitildi"
+     ],
+     "pollution_rate": 0.3
+    },
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_cop_dagi",
+   "character": "canan",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "must_by_day": 5,
+   "choices": [
+    {
+     "effects": {
+      "nature": -15,
+      "people": 5.0
+     },
+     "set_flags": [
+      "ucuz_copluk_secildi"
+     ],
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15,
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f1_beton_lobisi",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -8
+     },
+     "set_flags": [
+      "hulusi_ile_ilk_anlasma"
+     ]
+    },
+    {
+     "effects": {}
+    }
+   ]
+  },
+  {
+   "id": "f1_park_otopark",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_kacak_hafriyat",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -13.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "nature": -15,
+      "people": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f1_pazar_denetimi",
+   "character": "riza",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "people": -20.0,
+      "nature": 8
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_su_borusu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_okul_catisi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_sokak_kopekleri",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f1_gece_mesaisi",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -8
+     }
+    },
+    {
+     "effects": {
+      "people": 8,
+      "money": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_orman_kesimi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "nature": -15
+     }
+    },
+    {
+     "effects": {
+      "people": -13.0,
+      "nature": 8
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f1_cop_grevi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -15,
+      "people": -15,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f1_ilac_eksigi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_nehir_restoran",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "people": -8,
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f1_elektrik_kesintisi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 5
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_beton_ihaneti",
+   "character": "hulusi",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "must_by_day": 7,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     },
+     "set_flags": [
+      "fabrika_buyudu"
+     ]
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f2_asit_ayak_sesi",
+   "character": "riza",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "must_by_day": 8,
+   "choices": [
+    {
+     "effects": {
+      "people": 8,
+      "nature": -15
+     },
+     "set_flags": [
+      "mazotlu_filo_aktif"
+     ],
+     "pollution_rate": 0.3
+    },
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f2_bilet_zammi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -15
+     }
+    },
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_orman_yangini_riski",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 5.0
+     },
+     "schedule": [
+      {
+       "card": "e_orman_yangini",
+       "delay": 2,
+       "chance": 0.5
+      }
+     ],
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f2_gecekondu",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -15
+     }
+    },
+    {
+     "effects": {
+      "people": 8,
+      "money": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_tarim_ilaci",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "nature": 8,
+      "people": -8
+     }
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_festival",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_aritma_bozuldu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -15,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f2_maden_izni",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     }
+    },
+    {
+     "effects": {
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_ekmek_kuyrugu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -15,
+      "money": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_sanayi_bacalari",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "nature": 8,
+      "money": -5,
+      "people": -10.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": 8,
+      "nature": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_isiklandirma",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_poset_yasagi",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "nature": 8,
+      "people": -8
+     }
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_spor_kulubu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2_hurdalik_yangini",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 10
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -15,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_hayalet_sehir",
+   "character": "canan",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15,
+    "flags_all": [
+     "komur_dagitildi"
+    ]
+   },
+   "must_by_day": 11,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     },
+     "set_flags": [
+      "salgin_bastirildi"
+     ]
+    },
+    {
+     "effects": {
+      "people": 5.0,
+      "nature": -15
+     },
+     "set_flags": [
+      "salgin_gormezden_gelindi"
+     ],
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_zehirli_sular",
+   "character": "riza",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15,
+    "flags_all": [
+     "ucuz_copluk_secildi"
+    ]
+   },
+   "must_by_day": 11,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8
+     },
+     "set_flags": [
+      "su_temizlendi"
+     ]
+    },
+    {
+     "effects": {
+      "people": 5.0,
+      "nature": -15
+     },
+     "set_flags": [
+      "su_zehirlendi"
+     ],
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_beton_tarlalar",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     },
+     "set_flags": [
+      "tarim_satildi"
+     ]
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "money": -8,
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_hastane_jeneratoru",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -25
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_rusvet_skandali",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -8
+     },
+     "set_flags": [
+      "yolsuzluk_yapildi"
+     ]
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_gonullu_cevreciler",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_su_kesintisi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "people": -15
+     }
+    },
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_balik_olumleri",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_issizlik_dalgasi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_cop_grevi_buyuyor",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 5.0,
+      "nature": -8
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_eski_baskan_borcu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_kacak_kesim",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "people": -8,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "nature": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3_hava_uyarisi",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": 5.0,
+      "nature": -8
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f3_sanayi_tesviki",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     }
+    },
+    {
+     "effects": {}
+    }
+   ]
+  },
+  {
+   "id": "f3_mezarlik",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 11,
+    "max_day": 15
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "nature": -15,
+      "people": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_kimyasal_nehir",
+   "character": "hulusi",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20,
+    "flags_all": [
+     "fabrika_buyudu"
+    ]
+   },
+   "must_by_day": 16,
+   "choices": [
+    {
+     "effects": {
+      "people": -15,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     },
+     "set_flags": [
+      "nehir_oldu"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f4_asit_yagmurlari",
+   "character": "event",
+   "weight": 3,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20,
+    "flags_all": [
+     "mazotlu_filo_aktif"
+    ]
+   },
+   "must_by_day": 16,
+   "choices": [
+    {
+     "effects": {
+      "people": -20.0,
+      "money": -8
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "nature": -15,
+      "money": 5.0
+     },
+     "set_flags": [
+      "asit_yagmuru_kronik"
+     ],
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f4_gazeteci_tehdidi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15
+     },
+     "set_flags": [
+      "yolsuzluk_yapildi"
+     ]
+    },
+    {
+     "effects": {
+      "people": -15,
+      "money": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_gunes_paneli",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f4_gida_fiyatlari",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_sanayi_gocu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "nature": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_maske",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "people": -20.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_aritma_sabotaji",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15
+     }
+    },
+    {
+     "effects": {
+      "nature": -15,
+      "people": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f4_sendika",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -15
+     }
+    },
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_yabanci_yatirimci",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 25,
+      "nature": -25
+     }
+    },
+    {
+     "effects": {
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f4_toprak_kaymasi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -25
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4_hava_filtresi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 5.0,
+      "nature": -8
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f4_nehir_yatagi",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     }
+    },
+    {
+     "effects": {}
+    }
+   ]
+  },
+  {
+   "id": "f4_salgin_kontrolden",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": -20.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "nature": -25,
+      "people": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f4_secim_soylentileri",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 20
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_dogalgaz_kesintisi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_su_tankeri_cetesi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_hastane_tesekkuru",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25,
+    "flags_all": [
+     "salgin_bastirildi"
+    ]
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_temiz_su_hasadi",
+   "character": "riza",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25,
+    "flags_all": [
+     "su_temizlendi"
+    ]
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "money": 15,
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_yolsuzluk_sorusturmasi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25,
+    "flags_all": [
+     "yolsuzluk_yapildi"
+    ]
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_avm_acilisi",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25,
+    "flags_all": [
+     "tarim_satildi"
+    ]
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "people": 8,
+      "money": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_isci_gocu",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15,
+      "money": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_okul_oksuruk",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_toz_firtinasi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f5_cop_ithalati",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 25,
+      "nature": -25
+     }
+    },
+    {
+     "effects": {}
+    }
+   ]
+  },
+  {
+   "id": "f5_gunes_tarlasi",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f5_su_kacaklari",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f5_mahalle_dayanisma",
+   "character": "riza",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f5_cati_seralari",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f5_aci_rapor",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 21,
+    "max_day": 25
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "people": -20.0,
+      "nature": 8
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_tahliye_plani",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_son_orman",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 25,
+      "nature": -25
+     }
+    },
+    {
+     "effects": {}
+    }
+   ]
+  },
+  {
+   "id": "f6_elektrik_faturalari",
+   "character": "riza",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_agac_adasi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f6_hava_alarmi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": -15
+     }
+    },
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_kurak_yaz",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_fidan_gunu",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f6_ihracat_krizi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30,
+    "flags_all": [
+     "nehir_oldu"
+    ]
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_halk_meydanda",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30,
+    "flags_all": [
+     "salgin_gormezden_gelindi"
+    ]
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "people": -25
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_ruzgar_santrali",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "people": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f6_cop_ayirma",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "people": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f6_hurda_sahasi",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     }
+    },
+    {
+     "effects": {}
+    }
+   ]
+  },
+  {
+   "id": "f6_secim_oncesi",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6_son_bilim_notu",
+   "character": "canan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": 5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "f6_son_gece",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "recyclable": true,
+   "choices": [
+    {
+     "effects": {
+      "people": 15,
+      "money": -8
+     }
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": -13.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "e_astim_salgini",
+   "character": "event",
+   "weight": 1,
+   "priority": true,
+   "cooldown_days": 6,
+   "requires": {
+    "max_nature": 29.9
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "e_orman_yangini",
+   "character": "event",
+   "weight": 1,
+   "scheduled_only": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "nature": -15
+     }
+    }
+   ]
+  },
+  {
+   "id": "k_isgucu_coktu",
+   "character": "event",
+   "weight": 1,
+   "priority": true,
+   "requires": {
+    "min_day": 21,
+    "flags_all": [
+     "salgin_gormezden_gelindi"
+    ]
+   },
+   "choices": [
+    {
+     "effects": {},
+     "set_flags": [
+      "kasa_kilitli"
+     ]
+    }
+   ],
+   "once": true
+  },
+  {
+   "id": "k_asit_kronik",
+   "character": "event",
+   "weight": 1,
+   "priority": true,
+   "requires": {
+    "min_day": 21,
+    "flags_all": [
+     "asit_yagmuru_kronik"
+    ]
+   },
+   "choices": [
+    {
+     "effects": {},
+     "set_flags": [
+      "stamina_x3"
+     ]
+    }
+   ],
+   "once": true
+  },
+  {
+   "id": "k_acliktan_isyan",
+   "character": "event",
+   "weight": 1,
+   "priority": true,
+   "requires": {
+    "min_day": 26,
+    "flags_all": [
+     "su_zehirlendi"
+    ]
+   },
+   "choices": [
+    {
+     "effects": {
+      "people": -100
+     }
+    }
+   ],
+   "once": true
+  },
+  {
+   "id": "k_ambargo",
+   "character": "event",
+   "weight": 1,
+   "priority": true,
+   "requires": {
+    "min_day": 26,
+    "flags_all": [
+     "nehir_oldu"
+    ]
+   },
+   "choices": [
+    {
+     "effects": {},
+     "set_flags": [
+      "ambargo"
+     ]
+    }
+   ],
+   "once": true
+  },
+  {
+   "id": "t_ilk_gun",
+   "character": "assistant",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 1,
+    "max_day": 1
+   },
+   "priority": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "n_borek",
+   "character": "nezaket",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 3,
+    "max_day": 7
+   },
+   "must_by_day": 5,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": 3
+     },
+     "schedule": [
+      {
+       "card": "n_borek_hatirlatma",
+       "delay": 3,
+       "chance": 1.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n_borek_hatirlatma",
+   "character": "nezaket",
+   "weight": 1,
+   "scheduled_only": true,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "n_komsu_kavgasi",
+   "character": "nezaket",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 5,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "n_dedikodu",
+   "character": "nezaket",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 8,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": 5,
+      "people": -3
+     }
+    }
+   ]
+  },
+  {
+   "id": "n_dugun",
+   "character": "nezaket",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 12,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "nature": -8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "n_salca",
+   "character": "nezaket",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 18,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "m_evrak",
+   "character": "mirmir",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 3,
+    "max_day": 14
+   },
+   "must_by_day": 5,
+   "choices": [
+    {
+     "effects": {
+      "money": -5
+     }
+    },
+    {
+     "effects": {
+      "money": -5,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "m_balik",
+   "character": "mirmir",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 4,
+    "max_day": 14
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "m_kayip",
+   "character": "mirmir",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 16
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     },
+     "schedule": [
+      {
+       "card": "m_geri_donus",
+       "delay": 3,
+       "chance": 1.0
+      }
+     ]
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": -8.0
+     },
+     "schedule": [
+      {
+       "card": "m_geri_donus",
+       "delay": 3,
+       "chance": 1.0
+      }
+     ],
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "m_geri_donus",
+   "character": "mirmir",
+   "weight": 1,
+   "scheduled_only": true,
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "d_rop",
+   "character": "defne",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 8,
+    "max_day": 20
+   },
+   "must_by_day": 11,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "d_hulusi_reklam",
+   "character": "defne",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 12,
+    "max_day": 25
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": 8,
+      "nature": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "d_ilan",
+   "character": "defne",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 14,
+    "max_day": 26
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 5,
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "d_karikatur",
+   "character": "defne",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 18,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -5,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": -3
+     }
+    }
+   ]
+  },
+  {
+   "id": "b_poster",
+   "character": "bruce",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 16,
+    "max_day": 25
+   },
+   "must_by_day": 19,
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "b_karbon",
+   "character": "bruce",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 18,
+    "max_day": 28
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "b_golf",
+   "character": "bruce",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 20,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": 15,
+      "nature": -15
+     }
+    },
+    {
+     "effects": {
+      "people": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "b_kafe",
+   "character": "bruce",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 22,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": 8,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "nature": 3,
+      "people": -5.0
+     },
+     "bp": 1
+    }
+   ]
+  },
+  {
+   "id": "b_veda",
+   "character": "bruce",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "money": 8,
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_reklam",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 3,
+    "max_day": 12
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -3
+     }
+    },
+    {
+     "effects": {
+      "money": -3,
+      "people": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_heykel",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 8,
+    "max_day": 20
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "people": -8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_plastik",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 12,
+    "max_day": 25
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": 8,
+      "nature": -8
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "h_pismanlik",
+   "character": "hulusi",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 22,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "nature": 8,
+      "people": -3
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "nature": 15
+     }
+    }
+   ]
+  },
+  {
+   "id": "a_tomurcuk_guncelle",
+   "character": "assistant",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 10,
+    "max_day": 20
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "a_tomurcuk_ruya",
+   "character": "assistant",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 14,
+    "max_day": 26
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "a_tomurcuk_sayim",
+   "character": "assistant",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 20,
+    "max_day": 30
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_guvercin",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 3,
+    "max_day": 10
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8,
+      "nature": 3
+     }
+    },
+    {
+     "effects": {
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_ordek",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 6,
+    "max_day": 16
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "people": 3,
+      "nature": -3
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_toplanti",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 5,
+    "max_day": 22
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -5,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": -3
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_cay",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 4,
+    "max_day": 20
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_kopek_koro",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 8,
+    "max_day": 24
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 15
+     }
+    },
+    {
+     "effects": {
+      "money": -8,
+      "people": 8,
+      "nature": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "g_bayrak",
+   "character": "event",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 10,
+    "max_day": 28
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "people": 8
+     }
+    },
+    {
+     "effects": {
+      "people": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "y_baykus",
+   "character": "yigithan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 7,
+    "max_day": 14
+   },
+   "must_by_day": 12,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8
+     }
+    },
+    {
+     "effects": {
+      "people": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "y_yangin",
+   "character": "yigithan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 14,
+    "max_day": 24
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": 5,
+      "nature": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "y_fidan_yuruyusu",
+   "character": "yigithan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 13,
+    "max_day": 22
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 8,
+      "people": 3
+     }
+    },
+    {
+     "effects": {
+      "money": -5,
+      "nature": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "y_nehir",
+   "character": "yigithan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 17,
+    "max_day": 25
+   },
+   "choices": [
+    {
+     "effects": {
+      "money": -15,
+      "nature": 15
+     }
+    },
+    {
+     "effects": {
+      "nature": 8,
+      "people": -8
+     }
+    }
+   ]
+  },
+  {
+   "id": "y_orman_okulu",
+   "character": "yigithan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 20,
+    "max_day": 28
+   },
+   "must_by_day": 24,
+   "choices": [
+    {
+     "effects": {
+      "money": -8,
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "money": -3,
+      "people": 5
+     }
+    }
+   ]
+  },
+  {
+   "id": "y_son",
+   "character": "yigithan",
+   "weight": 1,
+   "once": true,
+   "requires": {
+    "min_day": 26,
+    "max_day": 30
+   },
+   "must_by_day": 28,
+   "choices": [
+    {
+     "effects": {
+      "nature": 8,
+      "people": -5.0
+     },
+     "bp": 1
+    },
+    {
+     "effects": {
+      "people": 8,
+      "nature": -3
+     }
+    }
+   ]
+  }
+ ]
+}
