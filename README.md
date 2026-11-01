@@ -2,13 +2,15 @@
 
 Belediye başkanı olarak otuz günde Karatepe'yi yeniden yeşertmeye çalıştığın, 2 boyutlu piksel sanatlı bir şehir yönetimi oyunu. COP31 Oyun Hackathonu için yapıldı.
 
-> ⚠️ **Oyunu en yüksek performansta oynamak için Windows sürümünü indirin.** Web sürümü tarayıcı sınırları yüzünden daha düşük performansla çalışır.
+<h1 align="center">⚠️ OYUNU EN YÜKSEK PERFORMANSTA OYNAMAK İÇİN<br>WINDOWS SÜRÜMÜNÜ İNDİRİN</h1>
+
+<p align="center"><b>Web sürümü tarayıcı sınırları yüzünden daha düşük performansla çalışır.</b></p>
+
+<h2 align="center">⬇️ <a href="https://drive.google.com/file/d/1p2ocon1u19Ob4lkMtPF5Kua7s97OacQD/view">WINDOWS SÜRÜMÜNÜ İNDİR (Google Drive)</a></h2>
 
 ---
 
-## ⬇️ Windows sürümünü indir
-
-**[Windows sürümünü indir (Google Drive)](https://drive.google.com/file/d/1p2ocon1u19Ob4lkMtPF5Kua7s97OacQD/view)**
+## Kurulum
 
 İndirdiğin dosya zip ise bir klasöre çıkar, sonra `AshNSeed.exe`'yi çalıştır. Kurulum gerekmez.
 
@@ -20,8 +22,8 @@ Oyunun sayfası ve web sürümü: **[beyuphan.itch.io/ashnseed](https://beyuphan
 
 ## 🎬 Tanıtım videosu
 
-- Türkçe: *link eklenecek*
-- English: *link eklenecek*
+- Türkçe: [YouTube](https://youtu.be/fr4RCIGLJnU) · [Google Drive](https://drive.google.com/file/d/1Xmm6uUuYv2tJhwWctledTkz3TbwYICm6/view?usp=sharing)
+- English: [YouTube](https://youtu.be/TMDxK6awbkg) · [Google Drive](https://drive.google.com/file/d/1ogzAXw3-1pRYmmMQnGJg6X9eqqTeL6ec/view?usp=sharing)
 
 ---
 
