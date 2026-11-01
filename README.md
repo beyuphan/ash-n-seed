@@ -6,7 +6,9 @@ Belediye başkanı olarak otuz günde Karatepe'yi yeniden yeşertmeye çalışt�
 
 <p align="center"><b>Web sürümü tarayıcı sınırları yüzünden daha düşük performansla çalışır.</b></p>
 
-<h2 align="center">⬇️ <a href="https://drive.google.com/file/d/1p2ocon1u19Ob4lkMtPF5Kua7s97OacQD/view">WINDOWS SÜRÜMÜNÜ İNDİR (Google Drive)</a></h2>
+<h2 align="center">⬇️ <a href="https://github.com/beyuphan/ash-n-seed/releases/latest/download/AshNSeed_windows.zip">WINDOWS SÜRÜMÜNÜ İNDİR (GitHub, doğrudan indirir)</a></h2>
+
+<p align="center">Yedek bağlantılar: <a href="https://drive.google.com/file/d/1p2ocon1u19Ob4lkMtPF5Kua7s97OacQD/view">Google Drive</a> · <a href="https://github.com/beyuphan/ash-n-seed/releases/latest">Tüm sürümler</a> · <a href="https://beyuphan.itch.io/ashnseed">itch.io</a></p>
 
 ---
 
